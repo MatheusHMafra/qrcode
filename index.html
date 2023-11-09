@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+</head>
+
+<body>
+    <div>
+        <h1>Gerador de QR Code</h1>
+        <form>
+            <label for="conteudo">Conteúdo:</label>
+            <input type="text" name="conteudo" id="conteudo" placeholder="Conteúdo">
+            <input type="submit" value="Gerar">
+        </form>
+        <div id="qrcode"></div>
+    </div>
+    <script src="js/qrcode.min.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        const conteudo = document.querySelector('#conteudo');
+        const qrcode = new QRCode(document.querySelector('#qrcode'));
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            qrcode.makeCode(conteudo.value);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+body {
+    background-color: #000000;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#qrcode {
+    /*Align on the center*/
+    width: 256px;
+    height: 256px;
+}

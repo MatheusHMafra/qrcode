@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Gerador de QR Code</title>
 </head>
 
@@ -15,6 +16,7 @@
             <input type="text" name="conteudo" id="conteudo" placeholder="Conteúdo">
             <input type="submit" value="Gerar">
         </form>
+        <br>
         <div id="qrcode"></div>
     </div>
     <script src="js/qrcode.min.js"></script>
@@ -25,6 +27,7 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            qrcode.clear();
             qrcode.makeCode(conteudo.value);
         });
     </script>
